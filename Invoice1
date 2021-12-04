@@ -1,0 +1,51 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        ArrayList<String> items = new ArrayList<String>();
+        ArrayList<Double> prices = new ArrayList<Double>();
+        items.add("Bison Sweater");
+        prices.add(55.99);
+        items.add("Bison Tee");
+        prices.add(14.99);
+        items.add("Bison Hoodie");
+        prices.add(23.99);
+        items.add("Bison Bumpersticker");
+        prices.add(4.99);
+
+        Scanner products = new Scanner(System.in);
+        System.out.println("Input item purchased then press enter (input done once all purchases have been entered):");
+
+        int a = -1;
+        double total = 0.0;
+        String input;
+
+        ArrayList<String> purchases = new ArrayList<String>();
+        ArrayList<Double> moneyspent = new ArrayList<Double>();
+
+        do {
+            input = products.nextLine();
+            purchases.add(input);
+            for (int i = 0; i < items.size(); i++)
+            {
+                if (input.equals(items.get(i)))
+            {
+                a = i;
+                }
+            }
+            moneyspent.add(prices.get(a));
+        } while (!input.equalsIgnoreCase("done"));
+
+        System.out.println("Purchases:");
+        
+        for (int i = 0; i < purchases.size() - 1; i++) {
+            System.out.println(purchases.get(i));
+            total += moneyspent.get(i);
+        }
+        System.out.print("Total Spent: $");
+        System.out.printf("%.2f", total);
+    }
