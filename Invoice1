@@ -18,7 +18,7 @@ public class Main {
         prices.add(4.99);
 
         System.out.println(
-                "\n   Items for Sale:" +
+                "\n   Items Offered:" +
                         "\n Bison Sweater" +
                         "\n Bison Tee" +
                         "\n Bison Hoodie" +
