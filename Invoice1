@@ -19,14 +19,14 @@ public class Main {
 
         System.out.println(
                 "\n   Items Offered:" +
-                        "\n Bison Sweater" +
-                        "\n Bison Tee" +
-                        "\n Bison Hoodie" +
-                        "\n Bison Bumpersticker");
+                        "\n Bison Sweater" + " $55.99" +
+                        "\n Bison Tee" + " $14.99" +
+                        "\n Bison Hoodie" + " $23.99" +
+                        "\n Bison Bumpersticker"+ " $4.99");
 
         Scanner products = new Scanner(System.in);
         System.out.println(" ");
-        System.out.println("Input item purchased then press enter (input done once all purchases have been entered):");
+        System.out.println("Input item purchased then press enter (Please input done when finished with transaction):");
 
         int a = -1;
         double total = 0.0;
